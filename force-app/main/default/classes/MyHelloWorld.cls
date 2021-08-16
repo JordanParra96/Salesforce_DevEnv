@@ -3,5 +3,6 @@ public with sharing class MyHelloWorld {
         for (Book__c b :books){
            b.Price__c *= 0.9;
         }
+        system.debug('Test debug');
      }
 }
