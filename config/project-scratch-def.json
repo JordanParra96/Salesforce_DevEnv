@@ -1,12 +1,7 @@
 {
   "orgName": "Jordan scratch",
   "edition": "Enterprise",
-  "features": [
-    "EnableSetPasswordInApi",
-    "Communities",
-    "ServiceCloud",
-    "Chatbot"
-  ],
+  "features": ["EnableSetPasswordInApi", "Communities", "ServiceCloud"],
   "settings": {
     "communitiesSettings": {
       "enableNetworksEnabled": true
