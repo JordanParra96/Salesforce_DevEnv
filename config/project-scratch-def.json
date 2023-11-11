@@ -1,13 +1,27 @@
 {
-  "orgName": "Demo company",
-  "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
+  "orgName": "Jordan scratch",
+  "edition": "Enterprise",
+  "features": [
+    "EnableSetPasswordInApi",
+    "Communities",
+    "ServiceCloud",
+    "Chatbot"
+  ],
   "settings": {
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+    },
+    "omniChannelSettings": {
+      "enableOmniChannel": true
+    },
+    "caseSettings": {
+      "systemUserEmail": "jordanstevenparratorres@gmail.com"
+    },
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
     },
     "mobileSettings": {
-      "enableS1EncryptedStoragePref2": false
+      "enableS1EncryptedStoragePref2": true
     }
   }
 }
