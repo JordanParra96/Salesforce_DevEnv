@@ -1,7 +1,12 @@
 {
   "orgName": "Jordan scratch",
   "edition": "Enterprise",
-  "features": ["EnableSetPasswordInApi", "Communities", "ServiceCloud"],
+  "features": [
+    "EnableSetPasswordInApi",
+    "Communities",
+    "ServiceCloud",
+    "EinsteinGPTForDevelopers"
+  ],
   "settings": {
     "communitiesSettings": {
       "enableNetworksEnabled": true
