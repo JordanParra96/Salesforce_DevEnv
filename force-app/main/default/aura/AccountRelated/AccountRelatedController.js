@@ -1,12 +1,12 @@
 ({
-  navToRecord: function (component, event, helper) {
+  navToRecord: function (component) {
     var navEvt = $A.get("e.force:navigateToSObject");
     navEvt.setParams({
       recordId: component.get("v.account.Id")
     });
     navEvt.fire();
   },
-  handleSuccess: function (component, event, helper) {
+  handleSuccess: function (component, helper) {
     var toastEvent = $A.get("e.force:showToast");
     toastEvent.setParams({
       title: "Success!",

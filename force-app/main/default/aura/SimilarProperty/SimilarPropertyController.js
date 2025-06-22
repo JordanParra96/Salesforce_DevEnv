@@ -1,15 +1,15 @@
 ({
-  navToRecord: function (component, event, helper) {
+  navToRecord: function (component) {
     var navEvt = $A.get("e.force:navigateToSObject");
     navEvt.setParams({
       recordId: component.get("v.property.Id")
     });
     navEvt.fire();
   },
-  editRecord: function (component, event, helper) {
+  editRecord: function (component, helper) {
     helper.showHide(component);
   },
-  handleSuccess: function (component, event, helper) {
+  handleSuccess: function (component, helper) {
     var toastEvent = $A.get("e.force:showToast");
     toastEvent.setParams({
       title: "Success!",

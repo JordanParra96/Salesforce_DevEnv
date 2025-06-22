@@ -1,5 +1,5 @@
 ({
-  doInit: function (component, event, helper) {
+  doInit: function (component) {
     var spinner = component.find("spinner");
     $A.util.removeClass(spinner, "slds-hide");
     var action = component.get("c.getSimilarProperties");
@@ -13,7 +13,6 @@
     action.setCallback(this, function (response) {
       var similarProperties = response.getReturnValue();
       component.set("v.similarProperties", similarProperties);
-      console.log("f: ", component.get("v.similarProperties"));
       $A.util.addClass(spinner, "slds-hide");
     });
     $A.enqueueAction(action);
