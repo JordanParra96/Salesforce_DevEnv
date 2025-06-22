@@ -1,11 +1,10 @@
 global with sharing class DreamHouseSampleDataController {
-
-    @RemoteAction
-    global static void deleteAll() {
-        DELETE [SELECT ID FROM favorite__c];    
-        DELETE [SELECT ID FROM property__c];    
-        DELETE [SELECT ID FROM broker__c];
-        DELETE [SELECT ID FROM LeadAssociation__c];
-		DELETE [SELECT ID FROM Lead WHERE company='Dreamhouse'];
-    }
+  @RemoteAction
+  global static void deleteAll() {
+    delete [SELECT ID FROM favorite__c];
+    delete [SELECT ID FROM property__c];
+    delete [SELECT ID FROM broker__c];
+    delete [SELECT ID FROM LeadAssociation__c];
+    delete [SELECT ID FROM Lead WHERE company = 'Dreamhouse'];
+  }
 }
