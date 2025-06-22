@@ -79,7 +79,7 @@ jobs:
 
       # Authenticate dev hub
       - name: "Authenticate Dev Hub"
-        run: sf org login sfdx-url -f ./DEVHUB_SFDX_URL.txt -a devhub -d
+        run: sf org login sfdx-url -f ./DEVHUB_SFDX_URL.txt -a devhub -d -s
 
       # Clear devhub storage
       - name: "Clear devhub storage"
