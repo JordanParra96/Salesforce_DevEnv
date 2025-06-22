@@ -76,9 +76,9 @@ jobs:
               echo "Missing DEVHUB_SFDX_URL secret. Is this workflow running on a fork?";
               exit 1;
           fi
-      # Authenticate dev hub
-      - name: "Authenticate Dev Hub"
-        run: sf org login sfdx-url -f ./DEVHUB_SFDX_URL.txt -a devhub -d
+      # Authenticate dev environment
+      - name: "Authenticate Dev Environment"
+        run: sf org login sfdx-url -f ./DEVHUB_SFDX_URL.txt -a defaultOrg -s
 
       # Run Apex tests in current org org
       - name: "Run Apex tests"
