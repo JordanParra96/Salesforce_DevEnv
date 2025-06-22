@@ -23,7 +23,6 @@ export default class ComboboxAutocomplete extends LightningElement {
   }
 
   handleSelectOption(event) {
-    this.value = event.currentTarget.dataset.label;
     const custEvent = new CustomEvent("selectoption", {
       detail: {
         value: event.currentTarget.dataset.value,
@@ -57,10 +56,7 @@ export default class ComboboxAutocomplete extends LightningElement {
   }
 
   handleBlur() {
-    // Timeout to ensure click event is captured before the
-    // options are hidden
-    setTimeout(() => {
-      this.isFocussed = false;
-    }, 500);
+    // Directly set isFocussed to false on blur
+    this.isFocussed = false;
   }
 }
