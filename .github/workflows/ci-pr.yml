@@ -51,10 +51,21 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           flags: LWC
 
-  scratch-org-test:
+  developer-org-test:
     runs-on: ubuntu-latest
     needs: format-lint-lwc-tests
     steps:
+      # Apex PMD Validaion
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup PMD
+        uses: legetz/setup-pmd@7.1.0
+      - name: APEX full scan
+        run: pmd check --dir ./force-app/main/default/classes/*.cls --rulesets ./ruleset.xml -f text
+
       # Install Salesforce CLI
       - name: "Install Salesforce CLI"
         run: |
