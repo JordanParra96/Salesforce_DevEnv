@@ -182,9 +182,9 @@
   >
       <priority>3</priority>
    </rule>
-   <rule
+<!--    <rule
     ref="category/apex/bestpractices.xml/ApexUnitTestClassShouldHaveRunAs"
-  />
+  /> -->
 <!--    <rule ref="category/apex/bestpractices.xml/ApexAssertionsShouldIncludeMessage"/> -->
 <!--    <rule ref="category/apex/bestpractices.xml/ApexUnitTestMethodShouldHaveIsTestAnnotation"/> -->
 <!--    <rule ref="category/apex/errorprone.xml/TestMethodsMustBeInTestClasses"/> -->

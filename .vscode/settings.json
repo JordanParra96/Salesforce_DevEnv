@@ -5,5 +5,8 @@
     "**/.sfdx": true
   },
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "apexPMD.rulesets": [
+    "ruleset.xml"
+  ]
 }
