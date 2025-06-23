@@ -1,18 +1,28 @@
-<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
-	<aura:attribute name="recordId" type="Id"/>
-    <aura:attribute name="account" type="Account"/>
-    <aura:attribute name="setMeOnInit" type="String" default="default value" />
-    <aura:handler event="c:recordUpdated" action="{!c.doInit}"/>
-    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
-        <force:recordData aura:id="accountRecord"
-                        recordId="{!v.recordId}"
-                        targetFields="{!v.account}"
-                        recordUpdated="{!c.doInit}"
-                        layoutType="FULL"/>
-    <lightning:card iconName="standard:user" title="{! 'Test for ' + v.account.Name}">
-        <div class="slds-p-horizontal_small">
-    		<h1 class="slds-text-heading_small slds-m-bottom_xx-small">{!v.account.Rating}</h1>
-            <p><b>{!v.setMeOnInit}</b></p>
-        </div>
-    </lightning:card>
+<aura:component
+  implements="flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <aura:attribute name="recordId" type="Id" />
+  <aura:attribute name="account" type="Account" />
+  <aura:attribute name="setMeOnInit" type="String" default="default value" />
+  <aura:handler event="c:recordUpdated" action="{!c.doInit}" />
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <force:recordData
+    aura:id="accountRecord"
+    recordId="{!v.recordId}"
+    targetFields="{!v.account}"
+    recordUpdated="{!c.doInit}"
+    layoutType="FULL"
+  />
+  <lightning:card
+    iconName="standard:user"
+    title="{! 'Test for ' + v.account.Name}"
+  >
+    <div class="slds-p-horizontal_small">
+      <h1 class="slds-text-heading_small slds-m-bottom_xx-small">
+        {!v.account.Rating}
+      </h1>
+      <p><b>{!v.setMeOnInit}</b></p>
+    </div>
+  </lightning:card>
 </aura:component>

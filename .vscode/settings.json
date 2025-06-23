@@ -4,5 +4,9 @@
     "**/bower_components": true,
     "**/.sfdx": true
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "apexPMD.rulesets": [
+    "ruleset.xml"
+  ]
 }

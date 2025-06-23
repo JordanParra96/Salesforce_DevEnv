@@ -1,28 +1,49 @@
-<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
-    <aura:attribute name="account" type="Account"/>
-    <aura:registerEvent name="recordUpdated" type="c:recordUpdated"/>
-    <lightning:card iconName="action:preview" title="Related Account">
-        <lightning:recordEditForm aura:id="editForm" recordId="{!v.account.Id}" objectApiName="Account" onsuccess="{!c.handleSuccess}">
-            <lightning:layout>
-                <a onclick="{!c.navToRecord}">
-                    <h3 class="slds-text-heading_small slds-m-bottom_xx-small">{!v.account.Name}</h3>
-                </a>
-            </lightning:layout>
-            <lightning:layout multipleRows="true">
-                <lightning:layoutItem size="6">
-                    <lightning:inputField fieldName="Site"/>
-                </lightning:layoutItem>
-                <lightning:layoutItem size="6">
-                    <lightning:inputField fieldName="AccountNumber"/>
-                </lightning:layoutItem>
-                <lightning:layoutItem size="6">
-                    <lightning:inputField fieldName="Description"/>
-                </lightning:layoutItem>
-            </lightning:layout>
-            <lightning:layout horizontalAlign="center" class="slds-m-top_large">
-                <lightning:button variant="neutral" label="Cancel" title="Cancel" type="text" onclick="{!c.handleCancel}"/>
-                <lightning:button variant="brand" label="Submit" title="Submit" type="submit"/>
-            </lightning:layout>
-        </lightning:recordEditForm>
-    </lightning:card>
+<aura:component
+  implements="flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <aura:attribute name="account" type="Account" />
+  <aura:registerEvent name="recordUpdated" type="c:recordUpdated" />
+  <lightning:card iconName="action:preview" title="Related Account">
+    <lightning:recordEditForm
+      aura:id="editForm"
+      recordId="{!v.account.Id}"
+      objectApiName="Account"
+      onsuccess="{!c.handleSuccess}"
+    >
+      <lightning:layout>
+        <a onclick="{!c.navToRecord}">
+          <h3 class="slds-text-heading_small slds-m-bottom_xx-small">
+            {!v.account.Name}
+          </h3>
+        </a>
+      </lightning:layout>
+      <lightning:layout multipleRows="true">
+        <lightning:layoutItem size="6">
+          <lightning:inputField fieldName="Site" />
+        </lightning:layoutItem>
+        <lightning:layoutItem size="6">
+          <lightning:inputField fieldName="AccountNumber" />
+        </lightning:layoutItem>
+        <lightning:layoutItem size="6">
+          <lightning:inputField fieldName="Description" />
+        </lightning:layoutItem>
+      </lightning:layout>
+      <lightning:layout horizontalAlign="center" class="slds-m-top_large">
+        <lightning:button
+          variant="neutral"
+          label="Cancel"
+          title="Cancel"
+          type="text"
+          onclick="{!c.handleCancel}"
+        />
+        <lightning:button
+          variant="brand"
+          label="Submit"
+          title="Submit"
+          type="submit"
+        />
+      </lightning:layout>
+    </lightning:recordEditForm>
+  </lightning:card>
 </aura:component>
