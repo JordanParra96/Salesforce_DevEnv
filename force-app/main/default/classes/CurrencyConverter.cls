@@ -33,6 +33,9 @@ public without sharing class CurrencyConverter {
       conversionRate = conversionRates.get(toCurrency);
       amount = amount * conversionRate;
     }
+
+    // Ensure the amount is rounded to two decimal places
+    amount = Math.round(amount * 100) / 100;
     return amount;
   }
 }
