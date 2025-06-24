@@ -1,5 +1,12 @@
+/**
+ * @description Test class for GetPropertiesApexController
+ */
 @isTest
 private class GetPropertiesApexControllerTest {
+  /**
+   * @description Test method for GetPropertiesApexController.getProperties
+   * Tests the retrieval of properties with the same Beds__c value, excluding the current property.
+   */
   @isTest
   static void testGetProperties() {
     // Insert properties with different Beds__c values
