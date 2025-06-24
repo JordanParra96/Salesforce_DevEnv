@@ -1,5 +1,7 @@
 # Salesforce DX Project: Next Steps
 
+[![CI Workflow](https://github.com/JordanParra96/Salesforce_DevEnv/workflows/CI/badge.svg)](https://github.com/JordanParra96/Salesforce_DevEnv/actions?query=workflow%3ACI)[![codecov](https://codecov.io/gh/JordanParra96/Salesforce_DevEnv/branch/master/graph/badge.svg)](https://codecov.io/gh/JordanParra96/Salesforce_DevEnv)
+
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
 
 ## How Do You Plan to Deploy Your Changes?
