@@ -4,12 +4,12 @@ name: CI
 # Definition when the workflow should run
 on:
   workflow_dispatch:
-    push:
-      branches:
-        - master
-      paths-ignore:
-        - "sfdx-project.json"
-        - "README.md"
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - "sfdx-project.json"
+      - "README.md"
 
 # Jobs to be executed
 jobs:
