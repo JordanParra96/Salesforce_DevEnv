@@ -7,7 +7,6 @@ This repository contains all metadata related to my personal dev environment, I 
 > [!IMPORTANT]
 > As it is an environment where I do testing, it is highly likely that not everything that is there follows 100% best practices and the latest trends, it is just a guide. 🏖️
 
-
 ## Table of contents
 
 - [Wiki Page](#wiki-page)
