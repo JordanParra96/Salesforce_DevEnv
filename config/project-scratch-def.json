@@ -22,6 +22,9 @@
     },
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": true
+    },
+    "currencySettings": {
+      "enableMultiCurrency": true
     }
   }
 }

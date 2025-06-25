@@ -59,13 +59,6 @@
         <apex:remoteObjectField name="Company" jsShorthand="company" />
       </apex:remoteObjectModel>
 
-      <apex:remoteObjectModel name="LeadAssociation__c" jsShorthand="LeadAssoc">
-        <apex:remoteObjectField name="Lead_Name__c" jsShorthand="leadname" />
-        <apex:remoteObjectField
-          name="Property_Name__c"
-          jsShorthand="propname"
-        />
-      </apex:remoteObjectModel>
     </apex:remoteObjects>
 
     <body style="padding: 0; margin: 0">

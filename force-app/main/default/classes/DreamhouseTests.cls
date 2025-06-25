@@ -2,11 +2,8 @@
 public class DreamhouseTests {
   static testMethod void testController() {
     DreamHouseSampleDataController.deleteAll();
-    System.assertEquals(0, [SELECT COUNT() FROM favorite__c]);
-    System.assertEquals(0, [SELECT COUNT() FROM favorite__c]);
     System.assertEquals(0, [SELECT COUNT() FROM property__c]);
     System.assertEquals(0, [SELECT COUNT() FROM broker__c]);
-    System.assertEquals(0, [SELECT COUNT() FROM LeadAssociation__c]);
     System.assertEquals(
       0,
       [SELECT COUNT() FROM Lead WHERE company = 'Dreamhouse']

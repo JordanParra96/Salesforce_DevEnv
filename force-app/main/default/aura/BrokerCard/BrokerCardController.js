@@ -1,3 +1,0 @@
-({
-  myAction: function () {}
-});
