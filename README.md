@@ -1,20 +1,29 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Developer Environment
 
 [![CI Workflow](https://github.com/JordanParra96/Salesforce_DevEnv/workflows/CI/badge.svg)](https://github.com/JordanParra96/Salesforce_DevEnv/actions?query=workflow%3ACI)[![codecov](https://codecov.io/gh/JordanParra96/Salesforce_DevEnv/branch/master/graph/badge.svg)](https://codecov.io/gh/JordanParra96/Salesforce_DevEnv)
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+This repository contains all metadata related to my personal dev environment, I do some experiments and test new features that I am encouredge in my Salesforce journey 😄
 
-## How Do You Plan to Deploy Your Changes?
+> [!IMPORTANT]
+> As it is an environment where I do testing, it is highly likely that not everything that is there follows 100% best practices and the latest trends, it is just a guide. 🏖️
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
 
-## Configure Your Salesforce DX Project
+## Table of contents
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+- [Wiki Page](#wiki-page)
 
-## Read All About It
+- [CI Workflow](#ci-workflow)
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+- [codecov](#codecov)
+
+## Wiki Page
+
+You can find in the Wiki page of this repository a set of best practices and tips that I have found on my way through Salesforce, this could help to facilitate the implementations and optimize the solutions, I invite you to take a look [Wiki Page](https://github.com/JordanParra96/Salesforce_DevEnv/wiki).
+
+## CI Workflow
+
+For this repository I implemented a CI flow in which validations are performed for both LWC code (using prettier and eslint) and Apex code (using prettier), in addition to this a validation of test classes is performed (both for LWC and apex) in which I try to ensure the quality of the code that is implemented and uploaded to the main branch, the complete implementation can be seen in the wiki `page in progress`.
+
+## Codecov
+
+Once the validation of the organization's code is done, the report of the status, coverage, lines covered, percentage, is uploaded to the codecov page ([codecov](https://about.codecov.io/)), the complete configuration and how to implement this can be found in the wiki `page in progress`.
