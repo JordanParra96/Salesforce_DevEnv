@@ -88,11 +88,31 @@ jobs:
               exit 1;
           fi
 
-      # Authenticate dev environment
-      - name: "Authenticate Dev environment"
-        run: sf org login sfdx-url -f ./DEVHUB_SFDX_URL.txt -a defaultOrg -s
+      # Authenticate dev hub
+      - name: "Authenticate Dev Hub"
+        run: sf org login sfdx-url -f ./DEVHUB_SFDX_URL.txt -a devhub -d
 
-      # Run Apex tests in current org org
+      # Clean up storage
+      - name: "Clean up storage"
+        run: sf apex run -f ./scripts/apex/deleteTHRecords.apex
+
+      # Create scratch org
+      - name: "Create scratch org"
+        run: sf org create scratch -f config/project-scratch-def.json -a scratch-org -d -y 1
+
+      # Install trail tracker package
+      - name: "Install Trail Tracker package"
+        run: sf package install --package 04t1Q000000s4kQQAQ -w 5
+
+      # Install dreamhouse package
+      - name: "Install Dreamhouse package"
+        run: sf package install --package 04tKY000000LgZyYAK -w 5
+
+      # Deploy source to scratch org
+      - name: "Push source to scratch org"
+        run: sf project deploy start
+
+      # Run Apex tests in scratch org
       - name: "Run Apex tests"
         run: sf apex test run -c -r human -d ./tests/apex -w 20
 
@@ -106,3 +126,8 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           flags: Apex
+
+      # Housekeeping
+      - name: "Delete scratch org"
+        if: always()
+        run: sf org delete scratch -p -o scratch-org
