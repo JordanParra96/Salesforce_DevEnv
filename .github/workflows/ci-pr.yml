@@ -102,11 +102,11 @@ jobs:
 
       # Install trail tracker package
       - name: "Install Trail Tracker package"
-        run: sf package install --package 04t1Q000000s4kQQAQ -w 5
+        run: echo y | sf package install --package 04t1Q000000s4kQQAQ -w 5
 
       # Install dreamhouse package
       - name: "Install Dreamhouse package"
-        run: sf package install --package 04tKY000000LgZyYAK -w 5
+        run: echo y | sf package install --package 04tKY000000LgZyYAK -w 5
 
       # Deploy source to scratch org
       - name: "Push source to scratch org"
