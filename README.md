@@ -21,7 +21,7 @@ You can find in the Wiki page of this repository a set of best practices and tip
 
 ## CI Workflow
 
-For this repository I implemented a CI flow in which validations are performed for both LWC code (using prettier and eslint) and Apex code (using prettier), in addition to this a validation of test classes is performed (both for LWC and apex) in which I try to ensure the quality of the code that is implemented and uploaded to the main branch, the complete implementation can be seen in the wiki `page in progress`.
+For this repository I implemented a CI flow in which validations are performed for both LWC code (using prettier and eslint) and Apex code (using prettier), in addition to this a validation of test classes is performed (both for LWC and apex) in which I try to ensure the quality of the code that is implemented and uploaded to the main branch, the complete implementation can be seen in the wiki [CI/CD Pipeline](https://github.com/JordanParra96/Salesforce_DevEnv/wiki/CI%2FCD-Pipeline).
 
 ## Codecov
 
