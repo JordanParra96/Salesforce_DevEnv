@@ -5,7 +5,8 @@
   "description": "Salesforce App",
   "overrides": {
     "form-data": "4.0.4",
-    "axios": "1.16.0"
+    "axios": "1.16.0",
+    "postcss": "8.5.10"
   },
   "scripts": {
     "lint": "eslint **/{aura,lwc}/**/*.js",
