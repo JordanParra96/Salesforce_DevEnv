@@ -1,4 +1,4 @@
-import { createElement } from "@lwc/engine-dom";
+import { createElement } from "lwc";
 import DatatableWithGraphql from "c/datatableWithGraphql";
 
 describe("c-datatable-with-graphql", () => {

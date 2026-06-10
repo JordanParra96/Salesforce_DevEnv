@@ -1,4 +1,4 @@
-import { createElement } from "@lwc/engine-dom";
+import { createElement } from "lwc";
 import ComboboxAutocomplete from "c/comboboxAutocomplete";
 
 describe("c-combobox-autocomplete", () => {
