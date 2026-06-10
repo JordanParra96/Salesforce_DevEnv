@@ -16,7 +16,13 @@
       </div>
       <div class="slds-media__body">
         <lightning:layout class="slds-hint-parent">
-          <a onclick="{!c.navToRecord}">
+          <a
+            onclick="
+              {
+                !c.navToRecord;
+              }
+            "
+          >
             <h3 class="slds-text-heading_small slds-m-bottom_xx-small">
               {!v.property.Name}
             </h3>
@@ -27,7 +33,11 @@
             iconClass="slds-button__icon_hint"
             variant="bare"
             alternativeText="Edit Record"
-            onclick="{!c.editRecord}"
+            onclick="
+              {
+                !c.editRecord;
+              }
+            "
           />
         </lightning:layout>
         <lightning:layout multipleRows="true">
@@ -64,7 +74,13 @@
       </div>
       <div class="slds-media__body">
         <lightning:layout>
-          <a onclick="{!c.navToRecord}">
+          <a
+            onclick="
+              {
+                !c.navToRecord;
+              }
+            "
+          >
             <h3 class="slds-text-heading_small slds-m-bottom_xx-small">
               {!v.property.Name}
             </h3>
@@ -90,7 +106,11 @@
             label="Cancel"
             title="Cancel"
             type="text"
-            onclick="{!c.handleCancel}"
+            onclick="
+              {
+                !c.handleCancel;
+              }
+            "
           />
           <lightning:button
             variant="brand"

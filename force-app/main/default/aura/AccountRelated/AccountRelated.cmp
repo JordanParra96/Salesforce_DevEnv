@@ -12,7 +12,13 @@
       onsuccess="{!c.handleSuccess}"
     >
       <lightning:layout>
-        <a onclick="{!c.navToRecord}">
+        <a
+          onclick="
+            {
+              !c.navToRecord;
+            }
+          "
+        >
           <h3 class="slds-text-heading_small slds-m-bottom_xx-small">
             {!v.account.Name}
           </h3>
@@ -35,7 +41,11 @@
           label="Cancel"
           title="Cancel"
           type="text"
-          onclick="{!c.handleCancel}"
+          onclick="
+            {
+              !c.handleCancel;
+            }
+          "
         />
         <lightning:button
           variant="brand"
