@@ -3,6 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "description": "Salesforce App",
+  "overrides": {
+    "form-data": "4.0.4"
+  },
   "scripts": {
     "lint": "eslint **/{aura,lwc}/**/*.js",
     "test": "npm run test:unit",
