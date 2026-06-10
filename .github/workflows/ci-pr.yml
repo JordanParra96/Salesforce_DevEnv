@@ -48,6 +48,8 @@ jobs:
   update-desc:
     runs-on: ubuntu-latest
     needs: add-labels
+    permissions:
+      pull-requests: write
     steps:
       # Checkout the source code
       - name: Checkout code
@@ -61,6 +63,8 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y gh
+          # Authenticate gh CLI using the provided token
+          echo "$GH_TOKEN" | gh auth login --with-token
           PR_NUMBER="${{ github.event.pull_request.number }}"
           COMMITS=$(gh pr view "$PR_NUMBER" --json commits -q '.commits[] | "- 📝 \(.oid[0:7]) \(.messageHeadline)"')
           NEW_DESC="Commits in the PR:
