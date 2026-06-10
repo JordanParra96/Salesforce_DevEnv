@@ -31,6 +31,8 @@ jobs:
               labelToAdd = 'module';
             } else if (branchName.startsWith('proj_')) {
               labelToAdd = 'project';
+            } else if (branchName.startsWith('dep_')) {
+              labelToAdd = 'dependencies';
             }
 
             if (labelToAdd) {
