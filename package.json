@@ -9,7 +9,12 @@
     "postcss": "8.5.10",
     "lodash": "4.18.0",
     "flatted": "3.4.2",
-    "minimatch": "9.0.7"
+    "@lwc/eslint-plugin-lwc": {
+      "minimatch": "9.0.7"
+    },
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "9.0.7"
+    }
   },
   "scripts": {
     "lint": "eslint **/{aura,lwc}/**/*.js",
