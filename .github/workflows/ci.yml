@@ -72,11 +72,13 @@ jobs:
 
       # Install Salesforce CLI
       - name: "Install Salesforce CLI"
+        env:
+          SF_DISABLE_ANALYTICS: true
         run: |
           npm install @salesforce/cli --location=global
-                   nodeInstallPath=$(npm config get prefix)
-                   echo "$nodeInstallPath/bin" >> $GITHUB_PATH
-                   sf --version
+          nodeInstallPath=$(npm config get prefix)
+          echo "$nodeInstallPath/bin" >> $GITHUB_PATH
+          sf --version
       # Checkout the source code
       - name: "Checkout source code"
         uses: actions/checkout@v4
@@ -85,15 +87,18 @@ jobs:
       - name: "Populate auth file with DEVHUB_SFDX_URL secret"
         shell: bash
         run: |
-          echo ${{ secrets.DEVHUB_SFDX_URL}} > ./DEVHUB_SFDX_URL.txt
+          set -euo pipefail
+          printf '%s' "${{ secrets.DEVHUB_SFDX_URL }}" > ./DEVHUB_SFDX_URL.txt
           secretFileSize=$(wc -c "./DEVHUB_SFDX_URL.txt" | awk '{print $1}')
-          if [ $secretFileSize == 1 ]; then
+          if [ "$secretFileSize" -le 1 ]; then
               echo "Missing DEVHUB_SFDX_URL secret. Is this workflow running on a fork?";
               exit 1;
           fi
 
       # Authenticate dev environment
       - name: "Authenticate Dev environment"
+        env:
+          SF_DISABLE_ANALYTICS: true
         run: sf org login sfdx-url -f ./DEVHUB_SFDX_URL.txt -a defaultOrg -s
 
       # Run Apex tests in current org org
