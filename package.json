@@ -6,6 +6,7 @@
   "overrides": {
     "form-data": "4.0.6",
     "js-yaml": "4.2.0",
+    "@babel/core": "7.29.6",
     "axios": "1.17.0",
     "postcss": "8.5.10",
     "lodash": "4.18.0",
