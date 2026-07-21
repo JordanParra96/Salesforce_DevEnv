@@ -85,6 +85,14 @@ jobs:
           restore-keys: |
             npm-${{ env.cache-name }}-
             npm-
+      # Ensure the lockfile exists before doing a clean install
+      - name: "Ensure npm lockfile exists"
+        run: |
+          if [ ! -f package-lock.json ]; then
+            echo "package-lock.json not found. Generating one from package.json..."
+            npm install --package-lock-only --ignore-scripts
+          fi
+
       # Install npm dependencies for Prettier and Jest
       - name: "Install npm dependencies"
         if: steps.cache-npm.outputs.cache-hit != 'true'
